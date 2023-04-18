@@ -8,7 +8,7 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
-    cout << "Tabela ASCII: ";
+    cout << "Tabela ASCII: " << (char)n << endl;
 
     return 0;
 }
