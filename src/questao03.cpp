@@ -12,11 +12,11 @@ int main(){
     cin >> a;
     cout << "Insira outro numero inteiro: ";
     cin >> b;
-    cout << "Valor de 'A' Pre-atribuicao: " << a << endl;
-    cout << "Valor de 'B': " << b << endl;
-    a = b;
-    cout << "Valor de 'A' Pos-atribuicao: " << a << endl;
-    cout << "Valor de 'B': " << b << endl;
+    cout << "Valor de 'A': " << a << endl;
+    cout << "Valor de 'B' Pre-atribuicao: " << b << endl;
+    b = a;
+    cout << "Valor de 'A': " << a << endl;
+    cout << "Valor de 'B' Pos-atribuicao: " << b << endl;
 
     return 0;
 }
