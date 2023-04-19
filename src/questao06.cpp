@@ -15,6 +15,7 @@ using namespace std;
 void titulo();
 void resultado();
 int main(){
+	setlocale(LC_ALL,"portuguese");
     int nCart;
     float saldo, gasto, lim;
     string nome, mes;
@@ -39,13 +40,17 @@ int main(){
     if(saldo == 0){
         cout << "Fatura atual: R$ " << gasto;
     } else if((saldo - gasto) < 0){
-        cout << "seu Saldo atual eh de: R$ " << 0 * saldo << endl;
+        cout << "seu Saldo atual é de: R$ " << 0 * saldo << endl;
         cout << "Voce estourou seu saldo do cartao! " << endl;
-        //lim = lim - abs(saldo - gasto);
-        cout << "Fatura atual: R$ " << lim - abs(saldo - gasto);
+        lim = lim - abs(saldo - gasto);
+        if(lim > 0){
+        	cout << "Fatura atual: R$ " << lim << endl;
+		} else if(lim < 0) {
+			cout << "você tem débito de: " << abs(lim) << endl;
+		}
     } else if((saldo - gasto) >= 0){
         cout << "seu Saldo atual eh de: R$ " << saldo - gasto << endl;
-        cout << "Seu limite atual eh de: R$ " << lim << endl;
+        cout << "Seu limite atual é de: R$ " << lim << endl;
     }
 
      return 0;
