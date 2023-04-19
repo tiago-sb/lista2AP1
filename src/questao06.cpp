@@ -64,3 +64,4 @@ void resultado(){
     cout << "|             resultado           |" << endl;
     cout << "-----------------------------------" << endl;
 }
+
